@@ -1,0 +1,262 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 2rem;
+  background: #f2f2f2;
+  color: #333;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 0.5rem;
+  font-size: 1rem;
+  flex: 1;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+form input,
+form button {
+  flex: 1 1 30%;
+}
+
+.hidden {
+  display: none;
+}
+
+.game-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card .info {
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+
+.card .actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.card button {
+  font-size: 0.8rem;
+}
+
+.card img{
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    object-fit: contain;
+    height: 200px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+dialog {
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  padding: 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+#game-form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1rem;
+  background: white;
+  border-radius: 10px;
+}
+
+#game-form h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #444;
+}
+
+#game-form input,
+#game-form select {
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#game-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+#game-form button[type="submit"],
+#game-form button[type="reset"] {
+  width: 48%;
+  align-self: center;
+  margin-top: 1rem;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+#game-add{
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+#game-form button[type="submit"],#game-add {
+  background: #4CAF50;
+  color: white;
+}
+
+#game-form button[type="submit"]:hover,#game-add:hover {
+  background: #45a049;
+}
+
+#game-form button[type="reset"] {
+  background: #ccc;
+}
+
+#game-form button[type="reset"]:hover {
+  background: #bbb;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.game-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding-top: 1rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  background: #f0f0f0;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card p {
+  font-size: 0.9rem;
+  margin: 0.2rem 0;
+  color: #444;
+}
+
+.card p strong {
+  color: #000;
+}
+
+.card button {
+  background: #007BFF;
+  border: none;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.card button[data-action="delete"] {
+  background: #dc3545;
+}
+
+.card button:hover {
+  opacity: 0.9;
+}
+
+.card .actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
